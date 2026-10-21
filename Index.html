@@ -105,19 +105,8 @@
 <body class="bg-creamBG text-oliveDark font-sans overflow-x-hidden selection:bg-royalGold selection:text-deepRed">
 
     <!-- Floating Ornamental Elements -->
-    <div id="floatingContainer"></div>
+    <div id="floatingContainer"><div class="floating-element" style="left: 96.7362vw; animation-duration: 8.87108s; animation-delay: 0.444528s; font-size: 25.7217px;">🌙</div><div class="floating-element" style="left: 70.4115vw; animation-duration: 12.5383s; animation-delay: 2.75223s; font-size: 25.4256px;">✨</div><div class="floating-element" style="left: 29.4809vw; animation-duration: 8.87795s; animation-delay: 1.86338s; font-size: 21.3455px;">🌙</div><div class="floating-element" style="left: 86.5617vw; animation-duration: 13.6869s; animation-delay: 1.88087s; font-size: 27.4801px;">✨</div><div class="floating-element" style="left: 20.059vw; animation-duration: 9.02146s; animation-delay: 2.68712s; font-size: 23.3933px;">✨</div><div class="floating-element" style="left: 54.9585vw; animation-duration: 9.83514s; animation-delay: 2.93313s; font-size: 19.5451px;">🌙</div><div class="floating-element" style="left: 2.34779vw; animation-duration: 9.87564s; animation-delay: 3.02579s; font-size: 27.5045px;">⭐</div><div class="floating-element" style="left: 72.2569vw; animation-duration: 12.058s; animation-delay: 3.03387s; font-size: 22.4765px;">🌸</div><div class="floating-element" style="left: 8.26057vw; animation-duration: 7.19472s; animation-delay: 1.67319s; font-size: 22.1023px;">⭐</div><div class="floating-element" style="left: 85.4626vw; animation-duration: 8.93689s; animation-delay: 0.0408305s; font-size: 18.8787px;">🌙</div><div class="floating-element" style="left: 63.4916vw; animation-duration: 8.32631s; animation-delay: 4.11144s; font-size: 22.8406px;">🌙</div><div class="floating-element" style="left: 26.216vw; animation-duration: 8.10701s; animation-delay: 0.780166s; font-size: 15.9147px;">✨</div><div class="floating-element" style="left: 14.9426vw; animation-duration: 8.6163s; animation-delay: 0.948996s; font-size: 16.6573px;">🌸</div><div class="floating-element" style="left: 42.0278vw; animation-duration: 8.19691s; animation-delay: 3.16572s; font-size: 20.9638px;">🌙</div><div class="floating-element" style="left: 97.61vw; animation-duration: 10.4869s; animation-delay: 4.39572s; font-size: 24.3154px;">⭐</div><div class="floating-element" style="left: 87.6685vw; animation-duration: 7.23046s; animation-delay: 4.04948s; font-size: 17.7904px;">⭐</div><div class="floating-element" style="left: 25.9752vw; animation-duration: 9.91728s; animation-delay: 3.24377s; font-size: 12.2525px;">⭐</div><div class="floating-element" style="left: 95.3768vw; animation-duration: 10.0078s; animation-delay: 1.74438s; font-size: 14.4984px;">✨</div><div class="floating-element" style="left: 55.3014vw; animation-duration: 14.4049s; animation-delay: 1.79826s; font-size: 17.8914px;">⭐</div><div class="floating-element" style="left: 9.18599vw; animation-duration: 11.3632s; animation-delay: 1.89707s; font-size: 24.9898px;">🌸</div><div class="floating-element" style="left: 52.0115vw; animation-duration: 7.42745s; animation-delay: 4.41075s; font-size: 13.2332px;">✨</div><div class="floating-element" style="left: 39.3166vw; animation-duration: 10.9212s; animation-delay: 1.56997s; font-size: 12.6083px;">🌙</div></div>
 
-    <!-- AUDIO CONTROLLER (Floating Top Right) -->
-    <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
-        <a href="https://youtu.be/dLnJTuWx8AU?si=ZKa101i3z4GImNjG" target="_blank" title="Listen on YouTube" 
-           class="bg-royalRed/90 hover:bg-deepRed text-goldLight p-2.5 rounded-full border border-royalGold shadow-lg transition-transform hover:scale-110 flex items-center justify-center">
-            <i class="fab fa-youtube text-lg"></i>
-        </a>
-        <button id="audioToggleBtn" onclick="toggleAudio()" class="flex items-center gap-2 bg-oliveGreen/90 text-goldLight border border-royalGold px-4 py-2 rounded-full shadow-xl hover:scale-105 transition-all text-xs font-semibold backdrop-blur-md">
-            <i id="audioIcon" class="fas fa-music text-royalGold animate-spin" style="animation-duration: 4s;"></i>
-            <span id="audioText">Play Music</span>
-        </button>
-    </div>
 
     <!-- HERO SECTION -->
     <section class="min-h-screen relative flex flex-col items-center justify-center text-center p-6 bg-gradient-to-b from-deepRed via-royalRed to-oliveDark text-creamBG overflow-hidden border-b-4 border-royalGold">
@@ -131,7 +120,7 @@
                 بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
             </div>
             <p class="font-serif italic text-xs md:text-sm text-goldLight tracking-widest uppercase">
-                In The Name Of ALLAH The Most Beneficent & Merciful With Best Blessing
+                In The Name Of ALLAH The Most Beneficent &amp; Merciful With Best Blessing
             </p>
 
             <div class="py-2 flex items-center justify-center gap-3">
@@ -171,19 +160,19 @@
                 <p class="text-[11px] uppercase tracking-widest text-royalGold font-semibold mb-3">Countdown To Nikaah Ceremony</p>
                 <div id="countdown" class="flex justify-center gap-2 md:gap-4 text-deepRed font-sans">
                     <div class="bg-gradient-to-b from-royalGold to-goldDark p-3 rounded-xl shadow-xl min-w-[68px]">
-                        <span id="days" class="block font-bold text-xl md:text-3xl text-white">00</span>
+                        <span id="days" class="block font-bold text-xl md:text-3xl text-white">26</span>
                         <span class="text-[9px] uppercase font-bold text-deepRed">Days</span>
                     </div>
                     <div class="bg-gradient-to-b from-royalGold to-goldDark p-3 rounded-xl shadow-xl min-w-[68px]">
-                        <span id="hours" class="block font-bold text-xl md:text-3xl text-white">00</span>
+                        <span id="hours" class="block font-bold text-xl md:text-3xl text-white">06</span>
                         <span class="text-[9px] uppercase font-bold text-deepRed">Hours</span>
                     </div>
                     <div class="bg-gradient-to-b from-royalGold to-goldDark p-3 rounded-xl shadow-xl min-w-[68px]">
-                        <span id="minutes" class="block font-bold text-xl md:text-3xl text-white">00</span>
+                        <span id="minutes" class="block font-bold text-xl md:text-3xl text-white">09</span>
                         <span class="text-[9px] uppercase font-bold text-deepRed">Mins</span>
                     </div>
                     <div class="bg-gradient-to-b from-royalGold to-goldDark p-3 rounded-xl shadow-xl min-w-[68px]">
-                        <span id="seconds" class="block font-bold text-xl md:text-3xl text-white">00</span>
+                        <span id="seconds" class="block font-bold text-xl md:text-3xl text-white">19</span>
                         <span class="text-[9px] uppercase font-bold text-deepRed">Secs</span>
                     </div>
                 </div>
@@ -200,7 +189,7 @@
 
     <!-- COUPLE & FAMILY DETAILS SECTION -->
     <section id="details" class="py-16 px-4 max-w-5xl mx-auto">
-        <div class="text-center mb-12 reveal">
+        <div class="text-center mb-12 reveal active">
             <h2 class="font-cinzel text-3xl md:text-4xl text-royalRed font-bold">The Auspicious Wedding</h2>
             <p class="font-serif italic text-oliveGreen text-base">Request the pleasure of your company on the auspicious occasion of the wedding</p>
             <div class="w-20 h-1 bg-royalGold mx-auto mt-3 rounded-full"></div>
@@ -208,7 +197,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Bride Card -->
-            <div class="royal-card p-8 rounded-3xl corner-border reveal border-l-4 border-l-royalRed text-center space-y-3">
+            <div class="royal-card p-8 rounded-3xl corner-border reveal border-l-4 border-l-royalRed text-center space-y-3 active">
                 <div class="w-16 h-16 bg-royalRed/10 text-royalRed rounded-full flex items-center justify-center mx-auto text-2xl border border-royalGold">
                     <i class="fas fa-heart text-royalRed"></i>
                 </div>
@@ -218,12 +207,12 @@
                 <div class="text-sm space-y-1 text-gray-700 font-serif">
                     <p><strong>Grand D/o:</strong> Shekh Abdullah</p>
                     <p><strong>D/o:</strong> Janab Mohd. Yasin</p>
-                    <p class="text-xs text-oliveGreen mt-2"><i class="fas fa-map-marker-alt text-royalGold mr-1"></i> R/o Vill. & Post Pata (Auraiya)</p>
+                    <p class="text-xs text-oliveGreen mt-2"><i class="fas fa-map-marker-alt text-royalGold mr-1"></i> R/o Vill. &amp; Post Pata (Auraiya)</p>
                 </div>
             </div>
 
             <!-- Groom Card -->
-            <div class="royal-card p-8 rounded-3xl corner-border reveal border-l-4 border-l-oliveGreen text-center space-y-3">
+            <div class="royal-card p-8 rounded-3xl corner-border reveal border-l-4 border-l-oliveGreen text-center space-y-3 active">
                 <div class="w-16 h-16 bg-oliveGreen/10 text-oliveGreen rounded-full flex items-center justify-center mx-auto text-2xl border border-royalGold">
                     <i class="fas fa-crown text-oliveGreen"></i>
                 </div>
@@ -242,42 +231,42 @@
     <!-- FUNCTIONS & TIMELINE SECTION -->
     <section id="events" class="py-16 px-4 bg-gradient-to-b from-oliveDark via-oliveGreen to-deepRed text-creamBG">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-12 reveal">
+            <div class="text-center mb-12 reveal active">
                 <p class="text-xs uppercase tracking-widest text-royalGold font-semibold">Schedule Of Celebration</p>
-                <h2 class="font-cinzel text-3xl md:text-5xl text-goldLight font-bold mt-1">Programme & Ceremonies</h2>
+                <h2 class="font-cinzel text-3xl md:text-5xl text-goldLight font-bold mt-1">Programme &amp; Ceremonies</h2>
                 <div class="w-24 h-1 bg-royalGold mx-auto mt-3 rounded-full"></div>
             </div>
 
             <!-- Pre-Wedding Events -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <!-- Haldi -->
-                <div class="bg-creamBG/10 backdrop-blur-md border border-royalGold/40 p-6 rounded-2xl reveal hover:border-royalGold transition-all">
+                <div class="bg-creamBG/10 backdrop-blur-md border border-royalGold/40 p-6 rounded-2xl reveal hover:border-royalGold transition-all active">
                     <div class="flex justify-between items-center mb-3">
                         <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-400/40 text-xs px-3 py-1 rounded-full font-bold">Pre-Wedding</span>
                         <i class="fas fa-sun text-yellow-400 text-2xl"></i>
                     </div>
                     <h3 class="font-cinzel text-2xl text-goldLight font-bold">Haldi Ceremony</h3>
                     <p class="text-sm text-gray-200 mt-2"><i class="far fa-calendar-alt text-royalGold mr-2"></i><strong>Date:</strong> 14 November 2026</p>
-                    <p class="text-sm text-gray-200 mt-1"><i class="fas fa-map-marker-alt text-royalGold mr-2"></i><strong>Venue:</strong> Residence (Vill. & Post Pata)</p>
+                    <p class="text-sm text-gray-200 mt-1"><i class="fas fa-map-marker-alt text-royalGold mr-2"></i><strong>Venue:</strong> Residence (Vill. &amp; Post Pata)</p>
                 </div>
 
                 <!-- Mehndi -->
-                <div class="bg-creamBG/10 backdrop-blur-md border border-royalGold/40 p-6 rounded-2xl reveal hover:border-royalGold transition-all">
+                <div class="bg-creamBG/10 backdrop-blur-md border border-royalGold/40 p-6 rounded-2xl reveal hover:border-royalGold transition-all active">
                     <div class="flex justify-between items-center mb-3">
                         <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 text-xs px-3 py-1 rounded-full font-bold">Pre-Wedding</span>
                         <i class="fas fa-hands text-emerald-400 text-2xl"></i>
                     </div>
                     <h3 class="font-cinzel text-2xl text-goldLight font-bold">Mehndi Evening</h3>
                     <p class="text-sm text-gray-200 mt-2"><i class="far fa-calendar-alt text-royalGold mr-2"></i><strong>Date:</strong> 15 November 2026</p>
-                    <p class="text-sm text-gray-200 mt-1"><i class="fas fa-map-marker-alt text-royalGold mr-2"></i><strong>Venue:</strong> Residence (Vill. & Post Pata)</p>
+                    <p class="text-sm text-gray-200 mt-1"><i class="fas fa-map-marker-alt text-royalGold mr-2"></i><strong>Venue:</strong> Residence (Vill. &amp; Post Pata)</p>
                 </div>
             </div>
 
             <!-- Main Wedding Day Card -->
-            <div class="bg-gradient-to-r from-deepRed via-royalRed to-deepRed border-2 border-royalGold p-8 rounded-3xl shadow-2xl reveal space-y-6">
+            <div class="bg-gradient-to-r from-deepRed via-royalRed to-deepRed border-2 border-royalGold p-8 rounded-3xl shadow-2xl reveal space-y-6 active">
                 <div class="text-center border-b border-royalGold/30 pb-4">
                     <span class="bg-royalGold text-deepRed font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-widest">Main Event Day</span>
-                    <h3 class="font-cinzel text-3xl md:text-4xl text-goldLight font-bold mt-3">Barat & Nikaah Ceremony</h3>
+                    <h3 class="font-cinzel text-3xl md:text-4xl text-goldLight font-bold mt-3">Barat &amp; Nikaah Ceremony</h3>
                     <p class="text-royalGold text-sm font-semibold mt-1"><i class="far fa-calendar-check mr-1"></i> Monday, 16 November 2026</p>
                 </div>
 
@@ -308,7 +297,7 @@
                 <div class="bg-oliveDark/80 p-6 rounded-2xl border border-royalGold/40 text-center space-y-3 mt-6">
                     <h4 class="font-cinzel text-xl text-royalGold font-bold"><i class="fas fa-map-marked-alt mr-2"></i> Venue Address</h4>
                     <p class="text-sm text-creamBG leading-relaxed">
-                        <strong>Our Residence:</strong> Near Gramin Bank, Village & Post Pata, District Auraiya, Uttar Pradesh - 206241
+                        <strong>Our Residence:</strong> Near Gramin Bank, Village &amp; Post Pata, District Auraiya, Uttar Pradesh - 206241
                     </p>
                     <a href="https://maps.app.goo.gl/Q3GuX1j9Dw661pTb8" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-royalGold to-goldDark hover:from-goldLight hover:to-royalGold text-deepRed font-bold px-6 py-3 rounded-xl shadow-lg transition-transform hover:scale-105 text-sm uppercase">
                         <i class="fas fa-location-arrow"></i> Open Google Maps Direction
@@ -322,7 +311,7 @@
     <section class="py-16 px-4 max-w-5xl mx-auto space-y-12">
         
         <!-- Cute Kid Invitation -->
-        <div class="royal-card p-6 md:p-8 rounded-3xl text-center border-2 border-royalGold reveal bg-gradient-to-r from-amber-50 to-creamBG">
+        <div class="royal-card p-6 md:p-8 rounded-3xl text-center border-2 border-royalGold reveal bg-gradient-to-r from-amber-50 to-creamBG active">
             <i class="fas fa-child text-3xl text-royalRed mb-2"></i>
             <h3 class="font-script text-3xl md:text-4xl text-royalRed font-bold">Cute Invitation</h3>
             <p class="font-serif italic text-lg text-oliveDark my-2">
@@ -334,18 +323,18 @@
         </div>
 
         <!-- Family Greetings Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal active">
             <!-- RSVP Family -->
             <div class="royal-card p-6 rounded-2xl border-t-4 border-t-royalRed">
                 <h4 class="font-cinzel font-bold text-royalRed border-b border-royalGold/30 pb-2 mb-3 text-sm">R.S.V.P.</h4>
                 <p class="text-xs text-gray-700 leading-relaxed font-serif">
-                    Mohd. Gulshan, Ayan, Arij (Ajju), Rihan, Faizan, Arsh, Abbash & All Family
+                    Mohd. Gulshan, Ayan, Arij (Ajju), Rihan, Faizan, Arsh, Abbash &amp; All Family
                 </p>
             </div>
 
             <!-- Chhote Dada & Fufa -->
             <div class="royal-card p-6 rounded-2xl border-t-4 border-t-royalGold">
-                <h4 class="font-cinzel font-bold text-oliveGreen border-b border-royalGold/30 pb-2 mb-3 text-sm">ChhoteDada & Fufa</h4>
+                <h4 class="font-cinzel font-bold text-oliveGreen border-b border-royalGold/30 pb-2 mb-3 text-sm">ChhoteDada &amp; Fufa</h4>
                 <p class="text-xs text-gray-700 leading-relaxed font-serif">
                     <strong>ChhoteDada:</strong> Mohd. Shakhawat Mansoori<br>
                     <strong>Fufa:</strong> Shakeel Ahmad, Ashiq Mansoori
@@ -362,10 +351,14 @@
         </div>
 
         <!-- Hosts / Awaiting your presence -->
-        <div class="royal-card p-8 rounded-3xl text-center border border-royalGold reveal bg-oliveDark text-creamBG">
+        <div class="royal-card p-8 rounded-3xl text-center border border-royalGold reveal bg-oliveDark text-creamBG active">
             <p class="text-xs uppercase tracking-widest text-royalGold font-bold mb-1">Awaiting Your Presence</p>
-            <h3 class="font-cinzel text-2xl text-goldLight font-bold">Mr. MOHD. YASIN & Mrs. PARVEEN BEGAM</h3>
-            <p class="text-xs text-gray-300 mt-2"><i class="fas fa-home text-royalGold mr-1"></i> Residence: Vill. & Post Pata (Auraiya)</p>
+            <h3 class="font-cinzel text-2xl text-goldLight font-bold">Mr. MOHD. YASIN &amp; Mrs. PARVEEN BEGAM</h3>
+            <p class="text-xs text-gray-300 mt-2"><i class="fas fa-home text-royalGold mr-1"></i> Residence: Vill. &amp; Post Pata (Auraiya)</p>
+			
+			<div>
+				<img class="w-full max-w-80 h-80 mx-auto p-4" src="./locationQR.jpg">
+			</div>
             <div class="pt-4 flex flex-wrap justify-center gap-4 text-xs font-semibold text-royalGold">
                 <a href="tel:9639759133" class="bg-black/30 px-4 py-2 rounded-full border border-royalGold/40 hover:bg-royalGold hover:text-deepRed transition-colors">
                     <i class="fas fa-phone mr-1"></i> 9639759133
@@ -378,66 +371,12 @@
     </section>
 
     <!-- RSVP & DUAS FORM SECTION -->
-    <section id="rsvp" class="py-20 px-4 bg-gradient-to-b from-deepRed via-royalRed to-oliveDark text-creamBG">
-        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-            
-            <!-- RSVP Form -->
-            <div class="bg-black/40 backdrop-blur-md p-8 rounded-3xl border-2 border-royalGold shadow-2xl reveal">
-                <h3 class="font-cinzel text-2xl text-royalGold font-bold text-center">RSVP & Attendance</h3>
-                <p class="text-xs text-gray-300 text-center mb-6">Confirm your presence directly via WhatsApp</p>
-
-                <form id="whatsappRsvpForm" onsubmit="sendWhatsAppRSVP(event)" class="space-y-4">
-                    <div>
-                        <label class="block text-xs uppercase text-goldLight font-semibold mb-1">Your Name *</label>
-                        <input type="text" id="rsvpGuestName" required class="w-full px-4 py-2.5 bg-black/50 border border-royalGold/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-royalGold text-sm">
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-xs uppercase text-goldLight font-semibold mb-1">Attending?</label>
-                            <select id="rsvpStatus" class="w-full px-3 py-2.5 bg-black/50 border border-royalGold/50 rounded-xl text-white focus:outline-none focus:border-royalGold text-sm">
-                                <option value="Yes, happily attending" class="text-black">Yes, Attending</option>
-                                <option value="Sorry, unable to attend" class="text-black">Unable to attend</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs uppercase text-goldLight font-semibold mb-1">Guests Count</label>
-                            <select id="rsvpGuestCount" class="w-full px-3 py-2.5 bg-black/50 border border-royalGold/50 rounded-xl text-white focus:outline-none focus:border-royalGold text-sm">
-                                <option value="1 Member" class="text-black">1 Member</option>
-                                <option value="2 Members" class="text-black">2 Members</option>
-                                <option value="With Family (3+)" class="text-black">With Family</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs uppercase text-goldLight font-semibold mb-1">Dua / Best Wishes</label>
-                        <textarea id="rsvpMessage" rows="3" placeholder="Write your blessed wishes for Muskan & Shoaib..." class="w-full px-4 py-2.5 bg-black/50 border border-royalGold/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-royalGold text-sm"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition-all text-xs uppercase tracking-wider flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp text-lg"></i> Send RSVP On WhatsApp
-                    </button>
-                </form>
-            </div>
-
-            <!-- Wishes Live Feed -->
-            <div class="space-y-4 reveal">
-                <h3 class="font-cinzel text-xl text-royalGold font-bold flex items-center gap-2">
-                    <i class="fas fa-comments"></i> Duas & Best Wishes
-                </h3>
-                <div id="wishesFeed" class="space-y-3 max-h-[400px] overflow-y-auto pr-2">
-                    <!-- Wishes persistent content -->
-                </div>
-            </div>
-
-        </div>
-    </section>
+    
 
     <!-- FOOTER -->
     <footer class="py-8 bg-oliveDark border-t border-royalGold/30 text-center text-xs text-royalGold">
         <p class="font-serif text-sm">|| Bismillah Hir Rahman Nir Rahim ||</p>
-        <p class="mt-2 text-gray-400">Muskan Weds Shoaib • 16 November 2026 • Vill. & Post Pata (Auraiya)</p>
+        <p class="mt-2 text-gray-400">Muskan Weds Shoaib • 16 November 2026 • Vill. &amp; Post Pata (Auraiya)</p>
     </footer>
 
     <!-- JAVASCRIPT LOGIC -->
@@ -605,5 +544,6 @@
             reveal();
         };
     </script>
+
 </body>
 </html>
