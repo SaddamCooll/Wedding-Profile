@@ -115,6 +115,22 @@ transform: translateY(0);
 <i id="audioIcon" class="fas fa-music text-lg"></i>
 </button>
 
+<!-- Entry Gate: tap to open invitation (also starts music, since browsers require a tap before audio can play) -->
+<div id="entryGate" class="fixed inset-0 z-[100] flex flex-col items-center justify-center text-center p-6 bg-gradient-to-b from-deepRed via-royalRed to-oliveDark text-creamBG cursor-pointer">
+<div class="absolute inset-0 opacity-15 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:20px_20px]"></div>
+<div class="z-10 space-y-6 reveal active">
+<div class="font-arabic text-2xl md:text-4xl text-royalGold" style="animation: pulseGlow 3s infinite;">
+بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+</div>
+<i class="fas fa-envelope-open-text text-5xl text-royalGold animate-bounce"></i>
+<h1 class="font-script text-5xl md:text-7xl text-royalGold gold-shimmer font-normal">Muskan &amp; Shoaib</h1>
+<p class="font-serif italic text-goldLight text-sm md:text-base tracking-wide">You're Cordially Invited</p>
+<button id="openInviteBtn" class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-royalGold to-goldDark hover:from-goldLight hover:to-royalGold text-deepRed font-bold px-8 py-3 rounded-full shadow-xl transition-transform hover:scale-105 text-sm uppercase tracking-widest">
+<i class="fas fa-music"></i> Tap To Open Invitation
+</button>
+</div>
+</div>
+
 <!-- Floating Ornamental Elements -->
 <div id="floatingContainer"><div class="floating-element" style="left: 96.7362vw; animation-duration: 8.87108s; animation-delay: 0.444528s; font-size: 25.7217px;">🌙</div><div class="floating-element" style="left: 70.4115vw; animation-duration: 12.5383s; animation-delay: 2.75223s; font-size: 25.4256px;">✨</div><div class="floating-element" style="left: 29.4809vw; animation-duration: 8.87795s; animation-delay: 1.86338s; font-size: 21.3455px;">🌙</div><div class="floating-element" style="left: 86.5617vw; animation-duration: 13.6869s; animation-delay: 1.88087s; font-size: 27.4801px;">✨</div><div class="floating-element" style="left: 20.059vw; animation-duration: 9.02146s; animation-delay: 2.68712s; font-size: 23.3933px;">✨</div><div class="floating-element" style="left: 54.9585vw; animation-duration: 9.83514s; animation-delay: 2.93313s; font-size: 19.5451px;">🌙</div><div class="floating-element" style="left: 2.34779vw; animation-duration: 9.87564s; animation-delay: 3.02579s; font-size: 27.5045px;">⭐</div><div class="floating-element" style="left: 72.2569vw; animation-duration: 12.058s; animation-delay: 3.03387s; font-size: 22.4765px;">🌸</div><div class="floating-element" style="left: 8.26057vw; animation-duration: 7.19472s; animation-delay: 1.67319s; font-size: 22.1023px;">⭐</div><div class="floating-element" style="left: 85.4626vw; animation-duration: 8.93689s; animation-delay: 0.0408305s; font-size: 18.8787px;">🌙</div><div class="floating-element" style="left: 63.4916vw; animation-duration: 8.32631s; animation-delay: 4.11144s; font-size: 22.8406px;">🌙</div><div class="floating-element" style="left: 26.216vw; animation-duration: 8.10701s; animation-delay: 0.780166s; font-size: 15.9147px;">✨</div><div class="floating-element" style="left: 14.9426vw; animation-duration: 8.6163s; animation-delay: 0.948996s; font-size: 16.6573px;">🌸</div><div class="floating-element" style="left: 42.0278vw; animation-duration: 8.19691s; animation-delay: 3.16572s; font-size: 20.9638px;">🌙</div><div class="floating-element" style="left: 97.61vw; animation-duration: 10.4869s; animation-delay: 4.39572s; font-size: 24.3154px;">⭐</div><div class="floating-element" style="left: 87.6685vw; animation-duration: 7.23046s; animation-delay: 4.04948s; font-size: 17.7904px;">⭐</div><div class="floating-element" style="left: 25.9752vw; animation-duration: 9.91728s; animation-delay: 3.24377s; font-size: 12.2525px;">⭐</div><div class="floating-element" style="left: 95.3768vw; animation-duration: 10.0078s; animation-delay: 1.74438s; font-size: 14.4984px;">✨</div><div class="floating-element" style="left: 55.3014vw; animation-duration: 14.4049s; animation-delay: 1.79826s; font-size: 17.8914px;">⭐</div><div class="floating-element" style="left: 9.18599vw; animation-duration: 11.3632s; animation-delay: 1.89707s; font-size: 24.9898px;">🌸</div><div class="floating-element" style="left: 52.0115vw; animation-duration: 7.42745s; animation-delay: 4.41075s; font-size: 13.2332px;">✨</div><div class="floating-element" style="left: 39.3166vw; animation-duration: 10.9212s; animation-delay: 1.56997s; font-size: 12.6083px;">🌙</div></div>
 
@@ -447,23 +463,22 @@ icon.classList.remove('animate-spin');
 }
 }
 
-function startMusicOnFirstInteraction() {
-if (isPlaying) return;
+// Opening the invitation gate is the guest's first tap - browsers allow
+// starting audio playback right on that gesture, so music begins immediately
+// as the invitation reveals instead of needing a separate button press.
+document.documentElement.classList.add('overflow-hidden');
+document.getElementById('entryGate').addEventListener('click', () => {
 bgMusic.play().then(() => {
 isPlaying = true;
 document.getElementById('audioIcon').classList.add('animate-spin');
 }).catch(() => {});
-}
 
-window.addEventListener('load', () => {
-bgMusic.play().then(() => {
-isPlaying = true;
-document.getElementById('audioIcon').classList.add('animate-spin');
-}).catch(() => {
-document.addEventListener('click', startMusicOnFirstInteraction, { once: true });
-document.addEventListener('touchstart', startMusicOnFirstInteraction, { once: true });
-});
-});
+const gate = document.getElementById('entryGate');
+gate.style.transition = 'opacity 0.6s ease';
+gate.style.opacity = '0';
+document.documentElement.classList.remove('overflow-hidden');
+setTimeout(() => gate.remove(), 650);
+}, { once: true });
 
 // 4. WHATSAPP RSVP SENDER & LOCAL STORAGE WISHES
 const defaultWishes = [
